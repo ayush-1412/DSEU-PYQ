@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Previous Year Question Papers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- University Logo -->
+        <div class="logo-container">
+            <img src="logo.png" alt="University Logo" class="logo">
+        </div>
+
+        <h1>Select Course and Subject</h1>
+        
+        <!-- Form -->
+        <form id="papersForm">
+            <div class="dropdowns">
+                <label for="course">Course:</label>
+                <select id="course" name="course" onchange="populateSubjects()" required>
+                    <option value="" disabled selected>Select Course</option>
+                    <option value="bca">BCA</option>
+                    <option value="bsc_mlt">B.Sc. (Medical Laboratory Technology)</option>
+                    <option value="bsc_da">B.Sc. (Data Analytics)</option>
+                </select>
+
+                <label for="subject">Subject:</label>
+                <select id="subject" name="subject" required>
+                    <option value="" disabled selected>Select Subject</option>
+                </select>
+            </div>
+            <button type="button" onclick="handleSubmit()">Show Papers</button>
+        </form>
+
+        <div id="papersSection"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
